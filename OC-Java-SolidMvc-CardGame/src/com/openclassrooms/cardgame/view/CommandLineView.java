@@ -30,9 +30,8 @@ public class CommandLineView implements GameViewable {
 	}
 
 	public void promptForNewGame() {
-		System.out.println("Press enter to deal again");
-		keyboard.nextLine();
-		controller.startGame();
+		System.out.println("Press enter to deal again or +q to exit");
+		controller.nextAction(keyboard.nextLine());
 	}
 
 	public void showWinner(String playerName) {
