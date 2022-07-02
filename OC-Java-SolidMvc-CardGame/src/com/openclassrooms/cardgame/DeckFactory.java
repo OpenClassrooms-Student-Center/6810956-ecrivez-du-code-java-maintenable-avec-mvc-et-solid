@@ -6,16 +6,21 @@ import com.openclassrooms.cardgame.model.SmallDeck;
 import com.openclassrooms.cardgame.model.TestDeck;
 
 public class DeckFactory {
-	public enum DeckType {
-		Normal,
-		Small,
-		Test
-	};
-	public static Deck makeDeck(DeckType type) {
-        switch (type) {
-            case Normal: return new NormalDeck();
-            case Small: return new SmallDeck();
-            case Test: return new TestDeck();
+	public static Deck getDeck(String deck) {
+        if(deck == null) {
+        	return new NormalDeck();
+        }
+
+        if(deck.equalsIgnoreCase("normalDeck")) {
+        	return new NormalDeck();
+        }
+        
+        if(deck.equalsIgnoreCase("smallDeck")) {
+        	return new SmallDeck();
+        }
+
+        if(deck.equalsIgnoreCase("testDeck")) {
+        	return new TestDeck();
         }
         
         return new NormalDeck();
