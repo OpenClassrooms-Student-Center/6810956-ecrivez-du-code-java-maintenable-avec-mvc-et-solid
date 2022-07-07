@@ -1,4 +1,5 @@
 package com.openclassrooms.cardgame;
+
 import com.openclassrooms.cardgame.view.CommandLineView;
 import com.openclassrooms.cardgame.view.GameSwingView;
 import com.openclassrooms.cardgame.view.GameViewable;

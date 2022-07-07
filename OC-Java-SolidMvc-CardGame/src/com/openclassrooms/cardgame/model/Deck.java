@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class Deck {
-	protected List<PlayingCard> cards;
+	List<PlayingCard> cards;
 	
 	public void shuffle() {
 		Random random = new Random();
