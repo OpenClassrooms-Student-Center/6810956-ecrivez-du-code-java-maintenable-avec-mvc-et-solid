@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class Deck {
-	List<PlayingCard> cards;
+	List<PlayableCard> cards;
 	
 	public void shuffle() {
 		Random random = new Random();
@@ -14,15 +14,15 @@ public abstract class Deck {
 		}
 	}
 	
-	public PlayingCard removeTopCard() {
+	public PlayableCard removeTopCard() {
 		return cards.remove(0);
 	}
 	
-	public void returnCardToDeck(PlayingCard pc) {
+	public void returnCardToDeck(PlayableCard pc) {
 		cards.add(pc);
 	}
 
-	public List<PlayingCard> getCards() {
+	public List<PlayableCard> getCards() {
 		return cards;
 	}
 	

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.openclassrooms.cardgame.games.GameEvaluator;
 import com.openclassrooms.cardgame.model.Deck;
+import com.openclassrooms.cardgame.model.PlayableCard;
 import com.openclassrooms.cardgame.model.Player;
 import com.openclassrooms.cardgame.model.PlayingCard;
 import com.openclassrooms.cardgame.view.GameViewable;
@@ -70,7 +71,7 @@ public class GameController {
 	public void flipCards() {
 		int playerIndex = 1;
 		for (Player player : players) {
-			PlayingCard pc = player.getCard(0);
+			PlayableCard pc = player.getCard(0);
 			pc.flip();
 			view.showCardForPlayer(playerIndex++, player.getName(), 
 					pc.getRank().toString(), pc.getSuit().toString());
